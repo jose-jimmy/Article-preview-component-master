@@ -17,45 +17,59 @@
 body{
     background-color: var(--clr-gray-100);
     font-size: 13px;
+    font-weight: 500;
     min-height: 100vh;
     font-family: 'Manrope', sans-serif;
+    display: grid;
+    place-items: center;
 }
 
-.main_container{
-    display: grid;
-        align-items: center;
-        padding: 4rem 1.5rem 0 1.5rem;
+main{
+    max-width: 425px;
+        background: var(--card-bg);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin: 1.7rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
 }
+
 
 .card_section{
     display: grid;
     background-color: white;
-    border-radius: 10px 10px 0 0;
+    border-radius: .5rem;
 }
 
-.cover_img{
+main .image_container{
+    overflow: hidden;
+}
+
+main .image_container img{
+    display: block;
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    transition: all 0.5s linear;
+}
+
+main .image_container img:hover{
+    transform: scale(1.2);
 }
 
 .card_details{
     padding: 1.5rem;
 }
+
 .card_title{
     padding-top: 20px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--clr-gray-700);
     margin-bottom: 1rem;
     opacity: 0.8;
-}
-
-.card_description{
-    font-size: 0.9rem;
-    color: var(--clr-gray-500);
-    margin-bottom: 1rem;
 }
 
 .card_author{
