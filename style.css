@@ -60,17 +60,23 @@ main .image_container img:hover{
 }
 
 .card_details{
-    padding: 1.5rem;
+    padding: 2.5rem 2rem 1.5rem 2rem;
 }
 
 .card_title{
-    padding-top: 20px;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--clr-gray-700);
     margin-bottom: 1rem;
-    opacity: 0.8;
+    opacity: 0.6;
 }
+
+.card_description {
+    color: var(--clr-gray-500);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
 
 .card_author{
     margin-top: 40px;
@@ -83,8 +89,14 @@ main .image_container img:hover{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
 }
+
+.author_details{
+    display: flex;
+    flex-direction: column;
+    margin-left: -1.2rem;
+}
+
 
 .author_name{
     font-size: 0.9rem;
@@ -97,6 +109,52 @@ main .image_container img:hover{
     font-size: 0.8rem;
     color: var(--clr-gray-500);
     opacity: 0.7;
-    padding-top: 5px;
+    padding-top: 3px;
+}
+
+.card_author .share #share_icon{
+        display: block;
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: auto;
+        background-color: var(--clr-gray-100);
+        padding: 0.5rem;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.3s linear;
+}
+
+.card_author .share_links{
+    margin-left: -32px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 325px;
+    height: 0%;
+    overflow: hidden;
+    background-color: var(--clr-gray-500);
+    z-index: 0;
+    transition: all 0.3s ease-in;
+    border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+}
+
+.active .share_links{
+    height: auto;
+    padding: 1.5rem 2rem 1.75rem 2rem;
+}
+
+
+.share_links span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--clr-gray-300);
+}
+
+.share_links a:hover {
+    transform: scale(1.2);
 }
 
