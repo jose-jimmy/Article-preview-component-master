@@ -1,6 +1,6 @@
-const toggleBtn = document.getElementById("share-icon");
-const shareLinks = document.querySelector(".share_links");
+const arrow = document.querySelector(".arrow");
+const share = document.querySelector(".share");
 
-toggleBtn.addEventListener("click", function () {
-  shareLinks.parentElement.classList.toggle("active");
+arrow.addEventListener("click", function () {
+  share.classList.toggle("show");
 });
